@@ -1,6 +1,7 @@
 package simulation
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/codemodify/ems-go/helpers"
@@ -48,6 +49,9 @@ func RunSimulation(dataFilePath string) {
 	logging.Debugf("%s: o1 - %s", logID, helpers.ObjectToString(o1, true))
 	logging.Debugf("%s: o2 - %s", logID, helpers.ObjectToString(o2, true))
 	logging.Debugf("%s: o3 - %s", logID, helpers.ObjectToString(o3, true))
+
+	logging.Warning("EXITING - SIMULATION DONE")
+	fmt.Println("EXITING - SIMULATION DONE")
 }
 
 func simulationEndpointHandler(rw http.ResponseWriter, r *http.Request) {
